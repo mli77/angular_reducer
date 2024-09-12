@@ -1,0 +1,21 @@
+<div>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div>
+      <label>First Name: </label><input type="text" name="firstName" ngModel/>
+    </div>
+    <div>
+      <label>Last Name: </label><input type="text" name="lastName" ngModel/>
+    </div>
+    <div>
+      <input type="submit" value="Change User"/>
+    </div>
+  </form>
+</div>
+<div>
+  <input type="text" name="statusCode" [(ngModel)]="statusCode"/>
+  <button (click)="onAddCode()">Add</button>
+</div>
+<div class="reducers">
+  <app-user></app-user>
+  <app-http-status></app-http-status>
+</div>
